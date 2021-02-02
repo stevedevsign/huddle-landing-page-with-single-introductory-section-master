@@ -1,0 +1,146 @@
+:root {
+    /* Reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Variables */
+    --violet: hsl(257, 40%, 49%);
+    --s-magenta: hsl(300, 69%, 71%);
+    --b-magenta: #fe52c3;
+    --light: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: url(/images/bg-desktop.svg) no-repeat center center/cover, var(--violet);
+    height: 100vh;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content {
+    margin: 2rem 0 3.5rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.main-content h1,
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 0.8;
+}
+
+.side-content {
+    margin-top: 30px;
+}
+
+.side-content p {
+    margin: 60px 0 30px;
+}
+
+.btn-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    border-radius: 30px;
+    color: var(--violet);
+    background: var(--light);
+    cursor: pointer;
+    box-shadow: 10px 10px 37px -14px rgba(0, 0, 0, 0.59);
+    transition: background-color 900ms ease-out;
+}
+
+.btn-register:hover {
+    color: var(--light);
+    background: var(--s-magenta);
+}
+
+.social-media {
+    display: flex;
+    justify-content: end;
+    margin-top: 40%;
+}
+
+.social-media a {
+    color: var(--light);
+    padding: 10px;
+    transition: color 900ms ease-out;
+}
+
+.social-media a:hover {
+    color: var(--b-magenta);
+}
+
+.attribution {
+    margin-top: 5rem;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    /* color: hsl(228, 45%, 44%);
+     */
+    color: var(--light);
+}
+
+@media (max-width: 375px) {
+    body {
+        background: url(/images/bg-mobile.svg) no-repeat fixed, var(--violet);
+    }
+
+    .container {
+        padding: 0 20px 0;
+        justify-items: center;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .mockup {
+        width: 100%;
+    }
+    .main-content {
+        grid-template-columns: 1fr;
+        color: var(--light);
+    }
+
+    .side-content {
+        display: grid;
+        justify-items: center;
+        margin-top: 30%;
+    }
+
+    h1,
+    p {
+        text-align: center;
+    }
+    h1,
+    h2 {
+        font-size: 1.5rem;
+        line-height: 0;
+        margin: 13px;
+    }
+    .side-content p {
+        margin: 30px 0 30px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .btn-register {
+        width: 250px;
+    }
+}

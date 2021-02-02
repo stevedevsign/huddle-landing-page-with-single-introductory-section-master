@@ -33,6 +33,7 @@ body {
 .main-content {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
+    color: var(--light);
 }
 
 .main-content h1,
@@ -115,7 +116,6 @@ h2 {
     }
     .main-content {
         grid-template-columns: 1fr;
-        color: var(--light);
     }
 
     .side-content {
